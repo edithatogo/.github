@@ -1,0 +1,38 @@
+name: Code Scanning Gate
+description: Fail when high or critical code-scanning alerts exist for the current commit.
+
+inputs:
+  repository:
+    description: Repository in owner/name form.
+    required: false
+    default: ${{ github.repository }}
+  commit-sha:
+    description: Commit SHA to inspect.
+    required: false
+    default: ${{ github.sha }}
+  token:
+    description: GitHub token used for the API.
+    required: false
+    default: ${{ github.token }}
+  timeout-seconds:
+    description: Maximum wait time before checking alerts.
+    required: false
+    default: "120"
+  poll-interval-seconds:
+    description: Poll interval while waiting for alerts to appear.
+    required: false
+    default: "10"
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        GITHUB_REPOSITORY: ${{ inputs.repository }}
+        GITHUB_SHA: ${{ inputs.commit-sha }}
+        GITHUB_TOKEN: ${{ inputs.token }}
+      run: |
+        set -euo pipefail
+        python "${{ github.action_path }}/check_code_scanning_alerts.py" \
+          --timeout-seconds "${{ inputs.timeout-seconds }}" \
+          --poll-interval-seconds "${{ inputs.poll-interval-seconds }}"
