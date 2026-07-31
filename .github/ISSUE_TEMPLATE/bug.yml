@@ -1,0 +1,19 @@
+name: Bug
+description: Report a reproducible defect
+title: "[Bug] "
+body:
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Include the smallest safe reproduction and remove secrets or private data.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected and actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Evidence
+      description: Logs, versions, seeds, checksums, or failing test names.
