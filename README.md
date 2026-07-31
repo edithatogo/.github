@@ -1,12 +1,7 @@
-# .github
+# Shared GitHub standards
 
-Shared org-level GitHub Actions utilities for `edithatogo`.
+Account-wide community-health files, inherited Renovate configuration, and reusable security utilities for `edithatogo`.
 
-## Code scanning gate
+Reusable CI/CD workflows and archetype templates live in [`repository-standards`](https://github.com/edithatogo/repository-standards).
 
-Reusable composite action:
-
-- `.github/actions/code-scanning-gate`
-
-It fails workflows when the current commit has open `high` or `critical`
-code-scanning alerts.
+This is a solo-maintainer estate: automation replaces mandatory human approval.
