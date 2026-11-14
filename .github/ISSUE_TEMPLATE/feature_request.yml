@@ -1,0 +1,41 @@
+name: Feature request
+description: Describe a user problem and a bounded, verifiable improvement.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check existing issues and the repository's stated scope. Describe the
+        need without including private data or credentials. A proposal does not
+        promise implementation, a release date or a change to publication gates.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Who needs this capability, what are they trying to do, and what prevents it today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest useful outcome and the existing behaviour it would affect.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include existing features, workarounds or other approaches and their tradeoffs.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Give observable examples or tests that would show the problem has been addressed.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and supporting context
+      description: Relevant versions, interfaces, data formats, sources or related issues; identify assumptions.

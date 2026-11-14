@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Private security report
-    url: https://github.com/edithatogo/.github/security/advisories/new
-    about: Report vulnerabilities privately.
+  - name: Help and support
+    url: https://github.com/edithatogo/.github/blob/main/SUPPORT.md
+    about: Choose the appropriate place for usage questions, defects and documentation requests.
+  - name: Report a security concern safely
+    url: https://github.com/edithatogo/.github/blob/main/SECURITY.md
+    about: Find the affected repository's private reporting route or request a contact without disclosing details.

@@ -1,0 +1,34 @@
+name: Documentation issue
+description: Report missing, unclear or incorrect documentation, examples or tutorials.
+title: "[Docs] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Documentation reports can cover the README, API reference, examples,
+        tutorials and contribution instructions. Keep examples synthetic and
+        remove private information from screenshots and command output.
+  - type: input
+    id: location
+    attributes:
+      label: Documentation location
+      description: Link the page, file or section and identify the version; describe the missing page if necessary.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain what is missing or misleading and the task you were trying to complete.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Propose clearer wording, an example or an expected result, if you have one.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and sources
+      description: Include reproducible example results or authoritative references; respect source rights and privacy.
