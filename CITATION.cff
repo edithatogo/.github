@@ -1,0 +1,8 @@
+cff-version: "1.2.0"
+message: "If you use this work, please cite it using these metadata."
+title: "Shared GitHub standards for edithatogo"
+authors:
+  - family-names: "Mordaunt"
+    given-names: "Dylan A"
+repository-code: "https://github.com/edithatogo/.github"
+url: "https://github.com/edithatogo/.github"
