@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "environment_configuration": false,
+  "devcontainer": "optional",
+  "template_repository": false,
+  "rationale": {
+    "environment_configuration": "Community defaults and repository utilities require no application environment file.",
+    "devcontainer": "Documented local tooling; no custom container qualification claimed."
+  }
+}

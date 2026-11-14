@@ -1,19 +1,59 @@
-name: Bug
-description: Report a reproducible defect
+name: Bug report
+description: Report a reproducible defect with enough context to investigate it.
 title: "[Bug] "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the repository's README and existing issues first. Use the smallest
+        safe example that demonstrates the problem. Remove credentials, personal
+        data and private source records from text, logs and attachments.
+        For suspected vulnerabilities, follow the
+        [security reporting guidance](https://github.com/edithatogo/.github/blob/main/SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Include the release tag, package version or commit; say unknown if unavailable.
+    validations:
+      required: true
   - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Relevant operating system, runtime/compiler, package manager and installation method.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
     attributes:
       label: Reproduction
-      description: Include the smallest safe reproduction and remove secrets or private data.
+      description: List the commands or steps and include a minimal synthetic example where possible.
     validations:
       required: true
   - type: textarea
+    id: expected
     attributes:
-      label: Expected and actual behaviour
+      label: Expected behaviour
+      description: Explain what should happen and link the documented requirement if available.
     validations:
       required: true
   - type: textarea
+    id: actual
     attributes:
-      label: Evidence
-      description: Logs, versions, seeds, checksums, or failing test names.
+      label: Actual behaviour
+      description: Describe the result, how often it happens and any known workaround.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Safe logs, failing test names, deterministic seeds or screenshots; omit sensitive values.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safe disclosure
+      options:
+        - label: I have removed credentials and private data, and this report does not disclose an unreported security vulnerability.
+          required: true
